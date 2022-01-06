@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "blinky.fullname" . }}-test-connection"
+  labels:
+    {{- include "blinky.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "blinky.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

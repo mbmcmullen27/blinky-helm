@@ -1,2 +1,2 @@
-# blinky-helm
+# blinky
 helm chart for blinky
