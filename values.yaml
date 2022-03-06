@@ -32,14 +32,9 @@ ingress:
     # nginx.ingress.kubernetes.io/rewrite-target: /
     # kubernetes.io/tls-acme: "true"
   hosts:
-  - host: blinky.local
-    paths:
+  - paths:
     - path: /app
       pathType: Prefix
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
 
 resources: {}
 
