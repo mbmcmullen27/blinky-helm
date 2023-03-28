@@ -8,10 +8,10 @@ env:
 replicaCount: 1
 
 image:
-  repository: mcmull27/blinky
+  repository: docker.io/mcmull27/blinky
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "arm"
+  tag: "latest"
 
 imagePullSecrets:
 - name: regcred
